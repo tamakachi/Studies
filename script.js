@@ -316,26 +316,23 @@
 // user.logout()
 // user.logFoods()
 
-let blog = [
-    {title: "Beginner CSS course",likes: 40},
-    {title: "Objects in Javascript",likes: 26},
-    {title: "Programmer memes",likes: 74}
-]
-
-console.log(blog)
 
 let user = {
     name: "Kent",
     age: "32",
     gender: "Male",
-    blogs: ["Beginner CSS course", "Objects in Javascript", "Programmer memes"],
+    blogs: [
+        {title: "Beginner CSS course",likes: 40},
+        {title: "Objects in Javascript",likes: 26},
+        {title: "Programmer memes",likes: 74}
+    ],
     login: function () { console.log(this.name + " has logged in") },
     logout: function () { console.log("user has logged out") },
-    logFoods: function () {
-        this.favoriteFoods.forEach(food => { console.log(food) })
-    }
+    logBlogs: function () {this.blogs.forEach(blog => 
+        {console.log(`Title: ${blog.title} Likes: ${blog.likes}`)})}
+
 }
 
 user.login()
 user.logout()
-user.logFoods()
+user.logBlogs()
