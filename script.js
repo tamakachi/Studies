@@ -317,22 +317,53 @@
 // user.logFoods()
 
 
-let user = {
-    name: "Kent",
-    age: "32",
-    gender: "Male",
-    blogs: [
-        {title: "Beginner CSS course",likes: 40},
-        {title: "Objects in Javascript",likes: 26},
-        {title: "Programmer memes",likes: 74}
-    ],
-    login: function () { console.log(this.name + " has logged in") },
-    logout: function () { console.log("user has logged out") },
-    logBlogs: function () {this.blogs.forEach(blog => 
-        {console.log(`Title: ${blog.title} Likes: ${blog.likes}`)})}
+// let user = {
+//     name: "Kent",
+//     age: "32",
+//     gender: "Male",
+//     blogs: [
+//         {title: "Beginner CSS course",likes: 40},
+//         {title: "Objects in Javascript",likes: 26},
+//         {title: "Programmer memes",likes: 74}
+//     ],
+//     login: function () { console.log(this.name + " has logged in") },
+//     logout: function () { console.log("user has logged out") },
+//     logBlogs: function () {this.blogs.forEach(blog => 
+//         {console.log(`Title: ${blog.title} Likes: ${blog.likes}`)})}
 
-}
+// }
 
-user.login()
-user.logout()
-user.logBlogs()
+// user.login()
+// user.logout()
+// user.logBlogs()
+
+// Primitive Types and reference types VERY IMPORTANT
+// Primitive types are numbers, strings, booleans, null, undefined and symbols
+// Reference types are all objects, object literals, arrays, functions and dates
+
+// See difference between behavior of primitive types vs reference types
+
+let myNumberOne = 50
+let myNumberTwo = myNumberOne
+
+console.log(`${myNumberOne} ${myNumberTwo}`)
+
+myNumberOne = 25
+
+
+console.log(`${myNumberOne} ${myNumberTwo}`)
+
+// Notice that after changing myNumberOne to 25, it does not affect the value of myNumberTwo
+// Because it is a primitive type, it creates a new variable on the stack and the variable are each unique
+
+let myObjectOne = {name:"Kent", age:32}
+let myObjectTwo = myObjectOne
+
+console.log(myObjectOne, myObjectTwo)
+
+myObjectOne.age= 40
+
+console.log(myObjectOne, myObjectTwo)
+
+// Notice that both object one and object two are affected by objectone.age
+// This is because objects are reference types and objectTwo is simply refering to object one, like a pointer
