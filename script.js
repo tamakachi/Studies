@@ -44,7 +44,7 @@
 // const scores = [50, 25, 0, 30, 100, 20, 10]
 
 // for (let index = 0; index < scores.length; index++) {
-    
+
 // Continue returns the flow back to the loop without executing the rest of the code block
 //     if (scores[index] == 0){
 //         continue;
@@ -57,7 +57,7 @@
 //     if (scores[index] >= 100){
 //         break;
 //     }
-    
+
 // }
 
 
@@ -157,8 +157,8 @@
 
 // Arrow function that only returns something has no curly brackets
 
-    // const greet = () => 'hello world'
-    // console.log(greet())
+// const greet = () => 'hello world'
+// console.log(greet())
 
 // Typical arrow function
 
@@ -200,7 +200,7 @@
 // const sayBye = (callback) => {
 //     callback()
 //     console.log("goodbye")
-    
+
 // }
 
 // const sayHi = () => {
@@ -293,11 +293,49 @@
 // It looks like an arrow function, but without the => arrow
 // Do not be confused by it, it's a regular function, simply shorter syntax
 
+// let user = {
+//     drive(){console.log("The user is driving")}
+// }
+
+// user.drive()
+
+
+// let user = {
+//     name: "Kent",
+//     age: "32",
+//     gender: "Male",
+//     favoriteFoods: ["Spaghetti", "Pizza", "Sushi"],
+//     login: function () { console.log(this.name + " has logged in") },
+//     logout: function () { console.log("user has logged out") },
+//     logFoods: function () {
+//         this.favoriteFoods.forEach(food => { console.log(food) })
+//     }
+// }
+
+// user.login()
+// user.logout()
+// user.logFoods()
+
+let blog = [
+    {title: "Beginner CSS course",likes: 40},
+    {title: "Objects in Javascript",likes: 26},
+    {title: "Programmer memes",likes: 74}
+]
+
+console.log(blog)
+
 let user = {
-    drive(){console.log("The user is driving")}
+    name: "Kent",
+    age: "32",
+    gender: "Male",
+    blogs: ["Beginner CSS course", "Objects in Javascript", "Programmer memes"],
+    login: function () { console.log(this.name + " has logged in") },
+    logout: function () { console.log("user has logged out") },
+    logFoods: function () {
+        this.favoriteFoods.forEach(food => { console.log(food) })
+    }
 }
 
-user.drive()
-
-
-
+user.login()
+user.logout()
+user.logFoods()
