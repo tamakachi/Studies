@@ -367,3 +367,4 @@ console.log(myObjectOne, myObjectTwo)
 
 // Notice that both object one and object two are affected by objectone.age
 // This is because objects are reference types and objectTwo is simply refering to object one, like a pointer
+
