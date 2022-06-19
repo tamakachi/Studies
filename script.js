@@ -368,6 +368,28 @@
 // Notice that both object one and object two are affected by objectone.age
 // This is because objects are reference types and objectTwo is simply refering to object one, like a pointer
 
-const para = document.querySelector("p")
 
-console.log(para)
+// Query an element
+
+// const para = document.querySelector("p")
+
+// console.log(para)
+
+// Query an element inside another element (child)
+// Selects a paragraph inside a div
+
+// const para = document.querySelector("div > p")
+// console.log(para)
+
+
+// Query an element that has a CSS class
+
+// const paraInsideDiv = document.querySelector("p.para")
+
+// console.log(paraInsideDiv)
+
+// Query all elements (returns an array, which of course start at 0)
+
+// const paragraphs = document.querySelectorAll("p")
+// console.log(paragraphs[0])
+
