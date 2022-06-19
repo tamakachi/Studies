@@ -392,3 +392,36 @@
 // const paragraphs = document.querySelectorAll("p")
 // paragraphs.forEach(paragraph => {console.log(paragraph)})
 
+// Query by ID, returns a single element
+
+// const paragraphId = document.getElementById("test")
+// paragraphId.innerHTML="Test successful"
+
+// innerText is prefferable when possible
+
+// const paragraphId = document.getElementById("test")
+// paragraphId.innerText="Test successful"
+
+// The problem with QuerySelector all is that it does not function like an array
+
+// It is possible to append to innerHTML and innerText with += instead of completely over righting the data
+
+// const para = document.querySelector("p")
+// para.innerText += " this string has been added onto the paragraph using query selector and .innerText +="
+
+// Getting and setting HTML and CSS attributes like class, ID, href etc...
+
+
+// Getting attribute
+// const anchor = document.querySelector("a")
+// console.log(anchor.getAttribute("href"))
+
+// Setting an attribute
+
+// const anchor = document.querySelector("a")
+// anchor.setAttribute("href", "https://www.bing.com")
+// anchor.innerText="Bing"
+
+// Most likely use will be assigning a class
+const para = document.querySelector("p")
+para.setAttribute("class","error")
