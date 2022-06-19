@@ -370,9 +370,8 @@
 
 
 // Query an element
-
+// This is the most common usage and is most recommended, it can be used to query a tag, class or ID
 // const para = document.querySelector("p")
-
 // console.log(para)
 
 // Query an element inside another element (child)
@@ -388,8 +387,8 @@
 
 // console.log(paraInsideDiv)
 
-// Query all elements (returns an array, which of course start at 0)
+// Query all elements (returns an Node list, which acts like an array, which of course start at 0)
 
 // const paragraphs = document.querySelectorAll("p")
-// console.log(paragraphs[0])
+// paragraphs.forEach(paragraph => {console.log(paragraph)})
 
