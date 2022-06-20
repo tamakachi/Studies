@@ -422,6 +422,10 @@
 // anchor.setAttribute("href", "https://www.bing.com")
 // anchor.innerText="Bing"
 
-// Most likely use will be assigning a class
+
+// const para = document.querySelector("p")
+// para.setAttribute("class","error")
+
+// The better way to change style on the fly
 const para = document.querySelector("p")
-para.setAttribute("class","error")
+para.style.color="red"
