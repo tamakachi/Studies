@@ -426,6 +426,14 @@
 // const para = document.querySelector("p")
 // para.setAttribute("class","error")
 
-// The better way to change style on the fly
-const para = document.querySelector("p")
-para.style.color="red"
+// Using setAttribute will overrite all classes, style or attibutes
+// It is extremely destructive
+
+// An okay way to change style on the fly
+// It is still much more prefferable to predefine css classes and change that
+// Example to follow after this snippet
+
+// const para = document.querySelector("p")
+// para.style.color="red"
+
+// Changing CSS classes on the fly, the best way
