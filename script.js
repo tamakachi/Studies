@@ -437,3 +437,9 @@
 // para.style.color="red"
 
 // Changing CSS classes on the fly, the best way
+// const para = document.querySelector(".para")
+// para.classList.add("error")
+
+// Removing CSS class on the fly
+const para = document.querySelector(".para")
+para.classList.add("error")
