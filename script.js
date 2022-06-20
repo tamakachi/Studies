@@ -441,16 +441,31 @@
 // para.classList.add("error")
 
 // Removing CSS class on the fly
+
 // const para = document.querySelector(".para")
 // para.classList.remove("para")
 
-const paragraphs = document.querySelectorAll("p")
-paragraphs.forEach(paragraph => {
-    if (paragraph.innerText.includes("success"))
-    {paragraph.classList.add("success")}
-    else if (paragraph.innerText.includes("error"))
-    {paragraph.classList.add("error")}
-})
+// Challenge, add classes depending on text content
+
+// const paragraphs = document.querySelectorAll("p")
+// paragraphs.forEach(paragraph => {
+//     if (paragraph.innerText.includes("success"))
+//     {paragraph.classList.add("success")}
+//     else if (paragraph.innerText.includes("error"))
+//     {paragraph.classList.add("error")}
+// })
 
 // The difference between innerText and textContent is that innerText doesn't work on text that has display:none
+// In essence, innerText works on visible text and textContent works on all text
 // It is probably best practice to use textContent when working in the future
+
+
+// Toggling classes (efficient)
+// If the element has the class, it will be removed, if it does not it will be added to the classlist
+
+const para = document.querySelector(".para")
+para.classList.toggle("error")
+
+//
+
+
