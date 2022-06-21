@@ -482,5 +482,23 @@
 
 // Working with parents of an element
 
-const para = document.querySelector("p")
-console.log(para.parentElement) 
+// const para = document.querySelector("p")
+// console.log(para.parentElement)  
+// console.log(para.parentElement.parentElement)// They can also be chained together
+// console.log(para.parentElement.firstElementChild) // Multiple chaining
+
+// Event listeners onclick
+
+// const button = document.querySelector("#alter-list")
+// button.addEventListener('click',()=>{
+//     console.log("I was clicked")
+// })
+
+
+// Using the event object for event listener to change the style of all list items on click
+const lists = document.querySelectorAll("li")
+lists.forEach(list =>{
+    list.addEventListener("click",(eventObject)=>{
+        eventObject.target.style.textDecoration = "line-through"
+    })
+})
