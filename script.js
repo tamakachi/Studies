@@ -463,9 +463,12 @@
 // Toggling classes (efficient)
 // If the element has the class, it will be removed, if it does not it will be added to the classlist
 
-const para = document.querySelector(".para")
-para.classList.toggle("error")
+// const para = document.querySelector(".para")
+// para.classList.toggle("error")
 
-//
+// Converting an HTML collection to an array
 
+const div = document.querySelector("div")
+console.log(div.children) // div.children is an HTML collection
+console.log(Array.from(div.children)) // Converts to array, is not destructive
 
