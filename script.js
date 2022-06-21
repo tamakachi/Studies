@@ -466,9 +466,21 @@
 // const para = document.querySelector(".para")
 // para.classList.toggle("error")
 
-// Converting an HTML collection to an array
+// Converting an HTML collection to an array and working with children of an element
 
-const div = document.querySelector("div")
-console.log(div.children) // div.children is an HTML collection
-console.log(Array.from(div.children)) // Converts to array, is not destructive
+// const div = document.querySelector("div")
+// console.log(div.children) // div.children is an HTML collection
+// console.log(Array.from(div.children)) // Converts to array, is not destructive
+// Once it's in array format it can be used with forEach()
 
+// Applies a CSS class to every child of the div element
+// const div = document.querySelector("div")
+// Array.from(div.children).forEach((child)=>{
+//     child.classList.add(".div-element")
+
+// })
+
+// Working with parents of an element
+
+const para = document.querySelector("p")
+console.log(para.parentElement) 
