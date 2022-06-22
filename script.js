@@ -498,9 +498,18 @@
 // Using the event object for event listener to change the style of all list items on click
 // Instead of using the e aka eventObject, list could also be used
 
-const lists = document.querySelectorAll("li")
-lists.forEach(list =>{
-    list.addEventListener("click",(eventObject)=>{
-        eventObject.target.style.textDecoration = "line-through"
-    })
+// const lists = document.querySelectorAll("li")
+// lists.forEach(list =>{
+//     list.addEventListener("click",(eventObject)=>{
+//         eventObject.target.style.textDecoration = "line-through"
+//     })
+// })
+
+const ul = document.querySelector("ul")
+
+
+const button = document.querySelector('#alter-list')
+button.addEventListener("click",()=>{
+    ul.append("<li>something new</li>")
+
 })
