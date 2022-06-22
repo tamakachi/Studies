@@ -505,11 +505,26 @@
 //     })
 // })
 
+
+// Adding elements to the DOM through on click method
+
 const ul = document.querySelector("ul")
-
-
 const button = document.querySelector('#alter-list')
-button.addEventListener("click",()=>{
-    ul.append("<li>something new</li>")
 
+button.addEventListener("click",()=>{
+    const li = document.createElement("li")
+    li.textContent="something new"
+    ul.append(li) // Use append to add to end of element children, prepend to add to beginning
+})
+
+// Remove an element from the dom on click
+
+const lists = document.querySelectorAll("li")
+lists.forEach((list)=>{
+    list.addEventListener("click",e=>{
+        e.target.remove()
+        // Alternative to e.taget.remove() would be list.remove()
+        // However it is prefferable to use the event object 
+        // It also allows for use of intellitext
+    })
 })
