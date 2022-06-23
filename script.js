@@ -507,6 +507,8 @@
 
 
 // Adding elements to the DOM through on click method
+// Elements can be created, for instance a div, const mydiv = document.createElement("div")
+// Elements can then be appended or prepended onto existing elements using .append
 
 const ul = document.querySelector("ul")
 const button = document.querySelector('#alter-list')
