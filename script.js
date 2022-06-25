@@ -510,23 +510,43 @@
 // Elements can be created, for instance a div, const mydiv = document.createElement("div")
 // Elements can then be appended or prepended onto existing elements using .append
 
-const ul = document.querySelector("ul")
-const button = document.querySelector('#alter-list')
+// const ul = document.querySelector("ul")
+// const button = document.querySelector('#alter-list')
 
-button.addEventListener("click",()=>{
-    const li = document.createElement("li")
-    li.textContent="something new"
-    ul.append(li) // Use append to add to end of element children, prepend to add to beginning
-})
+// button.addEventListener("click",()=>{
+//     const li = document.createElement("li")
+//     li.textContent="something new"
+//     ul.append(li) // Use append to add to end of element children, prepend to add to beginning
+// })
 
 // Remove an element from the dom on click
+
+// const lists = document.querySelectorAll("li")
+// lists.forEach((list)=>{
+//     list.addEventListener("click",e=>{
+//         e.target.remove()
+//         // Alternative to e.taget.remove() would be list.remove()
+//         // However it is prefferable to use the event object 
+//         // It also allows for use of intellitext
+//     })
+// })
+
+// Event bubbling (and delegation)
+// When clicking the li element, the event bubbles up and triggers the 
+// parent click event as well, this continues all the way up to the body element
+// This is called event bubbling 
+
+
+const ul = document.querySelector("ul")
+ul.addEventListener("click",()=>{
+    console.log("ul event")
+})
 
 const lists = document.querySelectorAll("li")
 lists.forEach((list)=>{
     list.addEventListener("click",e=>{
-        e.target.remove()
-        // Alternative to e.taget.remove() would be list.remove()
-        // However it is prefferable to use the event object 
-        // It also allows for use of intellitext
+        console.log("li event")
+
     })
 })
+
