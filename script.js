@@ -537,16 +537,56 @@
 // This is called event bubbling 
 
 
+// const ul = document.querySelector("ul")
+// ul.addEventListener("click",()=>{
+//     console.log("ul event")
+// })
+
+// const lists = document.querySelectorAll("li")
+// lists.forEach((list)=>{
+//     list.addEventListener("click",e=>{
+//         console.log("li event")
+
+//     })
+// })
+
+// To stop event bubbling we use .stopPropagation on the event object
+// e.stopPropagation
+
+// const ul = document.querySelector("ul")
+// ul.addEventListener("click",()=>{
+//     console.log("ul event")
+// })
+
+// const lists = document.querySelectorAll("li")
+// lists.forEach((list)=>{
+//     list.addEventListener("click",e=>{
+//         console.log("li event")
+//         e.stopPropagation()
+
+//     })
+// })
+
+// Event delegation is preffered to loops and foreach for attaching listeners
+// Because they offer improved performance
+// Events can be delagated through a parent element and then using conditional
+// On e to move forward
+// The following code deletes an li when clicked and uses a single event listener
+// On the parent UL tag
+
 const ul = document.querySelector("ul")
-ul.addEventListener("click",()=>{
-    console.log("ul event")
+ul.addEventListener("click",(e)=>{
+    if(e.target.tagName === "LI"){
+        e.target.remove()
+    }
 })
 
-const lists = document.querySelectorAll("li")
-lists.forEach((list)=>{
-    list.addEventListener("click",e=>{
-        console.log("li event")
+// A button which adds li elements on click
 
-    })
+const button = document.querySelector('#alter-list')
+
+button.addEventListener("click",()=>{
+    const li = document.createElement("li")
+    li.textContent="something new"
+    ul.append(li) // Use append to add to end of element children, prepend to add to beginning
 })
-
