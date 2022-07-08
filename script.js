@@ -574,19 +574,26 @@
 // The following code deletes an li when clicked and uses a single event listener
 // On the parent UL tag
 
-const ul = document.querySelector("ul")
-ul.addEventListener("click",(e)=>{
-    if(e.target.tagName === "LI"){
-        e.target.remove()
-    }
-})
+// const ul = document.querySelector("ul")
+// ul.addEventListener("click",(e)=>{
+//     if(e.target.tagName === "LI"){
+//         e.target.remove()
+//     }
+// })
 
-// A button which adds li elements on click
+// // A button which adds li elements on click
 
-const button = document.querySelector('#alter-list')
+// const button = document.querySelector('#alter-list')
 
-button.addEventListener("click",()=>{
-    const li = document.createElement("li")
-    li.textContent="something new"
-    ul.append(li) // Use append to add to end of element children, prepend to add to beginning
-})
+// button.addEventListener("click",()=>{
+//     const li = document.createElement("li")
+//     li.textContent="something new"
+//     ul.append(li) // Use append to add to end of element children, prepend to add to beginning
+// })
+
+// const box = document.querySelector(".box")
+
+// box.addEventListener("mousemove",e => {
+    
+//     console.log(`X: ${e.offsetX} Y: ${e.offsetY}` )
+// })
