@@ -597,3 +597,19 @@
     
 //     console.log(`X: ${e.offsetX} Y: ${e.offsetY}` )
 // })
+
+popupwrapper = document.querySelector(".popupwrapper")
+popupbutton = document.querySelector(".popupbutton")
+closebutton = document.querySelector(".close")
+
+popupbutton.addEventListener("click",()=>{
+    popupwrapper.style.display=("block")
+})
+
+popupwrapper.addEventListener("click",()=>{
+    popupwrapper.style.display=("none")
+})
+
+close.addEventListener("click",()=>{
+    popupwrapper.style.display=("none")
+})

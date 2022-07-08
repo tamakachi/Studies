@@ -1,2 +1,30 @@
 .error{background-color: orangered;}
 .success{background-color: green;}
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: antiquewhite;
+}
+
+.popupwrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color: beige;
+    
+    display: none;
+}
+
+.popup{
+    
+    background-color: aliceblue;
+    margin: 20% 30%;
+    padding: 3rem;
+    
+}
+
+.close{
+    float: right;
+}
